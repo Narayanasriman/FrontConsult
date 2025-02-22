@@ -1,28 +1,35 @@
-import React from 'react'
-import Navbar from './Navbar/Navbar'
-import Header from './Header/Header'
-import MiddlePage from './MiddlePage/MiddlePage'
-import FInd from './FInd/FInd'
-import Pricing from './Pricing/Pricing'
-import Questions from './Questions/Questions'
-import { Routes,Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar/Navbar';
+import Header from './Header/Header';
+import MiddlePage from './MiddlePage/MiddlePage';
+import Find from './Find/Find';
+import Pricing from './Pricing/Pricing';
+import Questions from './Questions/Questions';
+import Connect from './Connect/Connect';
 
-
-const App = () => {
+const Home = () => {
   return (
-    <div className='app'>
-       <Navbar />
-      <Routes>
-        <Route path='/' element={<Header />}/>
-      </Routes>
-     
-     
+    <div>
+      <Navbar />
+      <Header />
       <MiddlePage />
-      <FInd />
+      <Find />
       <Pricing />
       <Questions />
     </div>
-  )
-}
+  );
+};
 
-export default App
+const App = () => {
+  return (
+    
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/connect" element={<Connect />} />
+      </Routes>
+   
+  );
+};
+
+export default App;

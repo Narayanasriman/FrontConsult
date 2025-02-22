@@ -16,9 +16,14 @@ a{
   text-decoration: none;
   color:inherit;
 }
-.app{
-  width: 90%;
-  margin: auto;
+.app {
+  max-width: 1200px; /* Prevents it from stretching too much */
+  width: 80%;
+  margin: 0 auto; /* Ensures horizontal centering */
+  padding: 20px; /* Adds some spacing */
+  display: flex;
+  flex-direction: column; /* Keeps sections stacked */
+  align-items: center; /* Centers everything inside */
 }
 @keyframes fadeIn{
   0%{

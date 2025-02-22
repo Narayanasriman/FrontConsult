@@ -3,14 +3,14 @@
     display: flex;
     justify-content:flex-start;
     gap:40px;
-    margin-left: 230px;
+    margin-left: 300px;
   
 
 }
 .heading{
     margin-top:40px ;
     font-family: "Rubik", serif;
-    margin-left: 340px;
+    margin-left: 420px;
 }
 
 .find{
