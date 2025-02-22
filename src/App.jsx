@@ -5,13 +5,18 @@ import MiddlePage from './MiddlePage/MiddlePage'
 import FInd from './FInd/FInd'
 import Pricing from './Pricing/Pricing'
 import Questions from './Questions/Questions'
+import { Routes,Route } from 'react-router-dom'
 
 
 const App = () => {
   return (
     <div className='app'>
-      <Navbar />
-      <Header />
+       <Navbar />
+      <Routes>
+        <Route path='/' element={<Header />}/>
+      </Routes>
+     
+     
       <MiddlePage />
       <FInd />
       <Pricing />
