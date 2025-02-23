@@ -1,44 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-.Investor_list{
-    display: flex;
-    justify-content:flex-start;
-    gap:40px;
-    margin-left: 300px;
-  
 
-}
-.heading{
-    margin-top:40px ;
+.heading {
+    margin-top: 40px;
     font-family: "Rubik", serif;
-    margin-left: 420px;
+    text-align: center;
+    margin-left: 0;
 }
 
-.find{
+.Investor_list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding: 0 20px;
+}
+
+.find {
     margin-top: 20px;
     border: 2px solid hwb(0 69% 25%);
     border-radius: 10px;
-   
-    height:180px;
-    font-size: 16px; 
-   
+    height: auto;
+    font-size: 16px;
     width: 300px;
-    padding: 5px;
-    
-    
+    padding: 15px;
+    text-align: center;
 }
-.find img{
+
+.find img {
     height: 60px;
     padding: 10px;
-
 }
-.find h2{
+
+.find h2 {
     font-family: "Rubik", serif;
     font-size: medium;
 }
-.find h4{
+
+.find h4 {
     font-family: "Rubik", serif;
     font-weight: 100;
     margin-top: 5px;
-    
 }
 
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .heading {
+        font-size: 24px;
+    }
+    
+    .Investor_list {
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .find {
+        width: 280px;
+        padding: 10px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 22px;
+    }
+    
+    .Investor_list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .find {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .heading {
+        font-size: 20px;
+    }
+    
+    .find {
+        width: 95%;
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .find img {
+        height: 50px;
+    }
+}

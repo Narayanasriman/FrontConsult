@@ -1,75 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-.Pricing{
-    margin-left: 700px;
-    margin-top: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.Pricing {
+    margin: 30px auto;
+    text-align: center;
     font-family: "Rubik", serif;
 }
-.price_list{
+
+.price_list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 40px;
-    margin-left: 370px;
-    
+    flex-wrap: wrap;
 }
-.price_menu{
+
+.price_menu {
     margin-top: 20px;
     border: 2px solid hwb(0 69% 25%);
     padding: 10px;
-    height:200px;
-    width:250px;
-    
+    height: 200px;
+    width: 250px;
     border-radius: 10px;
-    
-   
-    
-    
+    text-align: center;
 }
 
-.price_menu_button{
+.price_menu_button {
     padding: 10px;
     border-radius: 10px;
     background-color: black;
-    color:white;
-    font-size:15px;
+    color: white;
+    font-size: 15px;
     transition: 0.2s;
     cursor: pointer;
     margin-top: 10px;
-   
 }
-.price_menu_button:hover{
+
+.price_menu_button:hover {
     background-color: #363636;
 }
-.bio{
+
+.bio {
     font-family: "Rubik", serif;
     font-weight: 100;
     margin-top: 5px;
-   
-    
 }
-.item_price{
+
+.item_price {
     font-family: "Rubik", serif;
     font-size: 30px;
     margin-top: 10px;
 }
+
 .price_list_bio {
-    list-style-type: none; /* Remove default bullets */
+    list-style-type: none;
     padding-left: 0;
-  }
-  
-  .price_list_bio li {
+}
+
+.price_list_bio li {
     position: relative;
-    padding-left: 20px; /* Space for the arrow */
-  }
-  
-  .price_list_bio li::before {
-    content: "→"; /* Unicode arrow */
-    color: black; /* Customize arrow color */
+    padding-left: 20px;
+}
+
+.price_list_bio li::before {
+    content: "→";
+    color: black;
     font-size: 16px;
     font-weight: bold;
-  
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-  }
-  
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .price_list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Pricing {
+        margin-left: 0;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .price_list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .price_menu {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .item_price {
+        font-size: 24px;
+    }
+
+    .price_menu_button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

@@ -4,7 +4,7 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <div className='navbar-top'>
-        <h1>Career Guide</h1>
+        <h1 className='navbar_title'>Career Guide</h1>
         <button className='sign-up'>Sign-Up</button>
       
     </div>

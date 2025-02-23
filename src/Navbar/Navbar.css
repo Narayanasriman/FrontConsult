@@ -1,21 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-.navbar-top{
-    padding: 20px 0px;
+
+.navbar-top {
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    font-family: Outfit;
-    margin-left: 30px;
+    justify-content: space-between; /* Keeps items evenly spaced */
+    align-items: center;
+    font-family: Outfit, sans-serif;
+    margin: 0 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
-.sign-up{
-    padding: 10px;
+
+/* Ensures navbar items distribute space evenly */
+.navbar-top > * {
+    flex: 1; /* Distributes available space */
+    text-align: center;
+}
+
+.navbar_title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left; /* Align title to the left */
+    flex: 2; /* Gives it more space */
+}
+
+.sign-up {
+    padding: 10px 15px;
     border-radius: 10px;
     background-color: black;
-    color:white;
+    color: white;
     font-size: large;
     transition: 0.2s;
     cursor: pointer;
-    margin-right: 30px;
+    border: none;
+    max-width: 200px;
+    text-align: center;
 }
-.sign-up:hover{
+
+/* Button hover effect */
+.sign-up:hover {
     background-color: #363636;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .navbar-top {
+        margin: 0 20px;
+        flex-wrap: wrap;
+    }
+
+    .navbar_title {
+        flex: 2;
+        text-align: left;
+        font-size: 22px;
+    }
+
+    .sign-up {
+        font-size: medium;
+        padding: 8px 12px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .navbar-top {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navbar_title {
+        flex: 1 1 auto;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .sign-up {
+        width: auto;
+        max-width: 150px;
+        padding: 8px 10px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .navbar-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar_title {
+        text-align: center;
+        flex: unset; /* Removes the flex so it centers properly */
+    }
+
+    .sign-up {
+        width: 100%;
+        max-width: 200px;
+    }
 }

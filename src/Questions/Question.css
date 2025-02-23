@@ -1,37 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .faq-container {
-    margin-top: 60px;
-    width: 650px;
-    margin-left: 450px;
+    margin: 60px auto; /* Centers it on all screens */
+    width: 60%;
+    max-width: 650px;
     background: #f9f9f9;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  }
-  
-  .Faq_title {
-    margin-top: 20px;
-    margin-left: 280px;
+.Faq_title {
+    text-align: center;
     font-size: 22px;
     font-weight: bold;
     font-family: "Rubik", serif;
-  }
-  
-  .faq-item {
-    margin-bottom: 10px;
-    margin-top: 20px;
+}
+
+.faq-item {
+    margin: 20px 0;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
-   
-    
-  }
-  
-  .faq-item:last-child {
+}
+
+.faq-item:last-child {
     border-bottom: none;
-  }
-  
-  .question-btn {
+}
+
+.question-btn {
     width: 100%;
     text-align: left;
     background: transparent;
@@ -43,16 +39,74 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .answer {
+}
+
+.answer {
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     background: #fff;
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
     font-family: "Rubik", serif;
-    font-size: 20px;
-  }
-  
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .faq-container {
+        width: 80%;
+    }
+
+    .Faq_title {
+        font-size: 20px;
+    }
+
+    .question-btn {
+        font-size: 18px;
+    }
+
+    .answer {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .faq-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .Faq_title {
+        font-size: 18px;
+    }
+
+    .question-btn {
+        font-size: 16px;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .faq-container {
+        width: 95%;
+    }
+
+    .Faq_title {
+        font-size: 16px;
+    }
+
+    .question-btn {
+        font-size: 14px;
+    }
+
+    .answer {
+        font-size: 12px;
+    }
+}
